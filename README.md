@@ -1,22 +1,22 @@
-# VMS Module Blueprint
+# VMS Factory
 
-VM(s) module Blueprint
+VM(s) Factory
 
-[![](https://img.shields.io/github/license/ik-vms-dockers/vms-blueprint)](https://github.com/ik-vms-dockers/vms-blueprint)
-![](https://img.shields.io/github/v/tag/ik-vms-dockers/vms-blueprint)
-[![](https://img.shields.io/github/workflow/status/ik-vms-dockers/vms-blueprint/Validator/master)](https://github.com/ik-vms-dockers/vms-blueprint/actions?query=is%3Acompleted)
-![](https://github.com/ik-vms-dockers/vms-blueprint/workflows/Validator/badge.svg)
-![](https://github.com/ik-vms-dockers/vms-blueprint/workflows/Labeler/badge.svg)
-![](https://img.shields.io/issues/github/ik-vms-dockers/vms-blueprint)
-![](https://img.shields.io/github/issues/ik-vms-dockers/vms-blueprint)
-![](https://img.shields.io/github/issues-closed/ik-vms-dockers/vms-blueprint)
-[![](https://img.shields.io/github/languages/code-size/ik-vms-dockers/vms-blueprint)](https://github.com/ik-vms-dockers/vms-blueprint)
-[![](https://img.shields.io/github/repo-size/ik-vms-dockers/vms-blueprint)](https://github.com/ik-vms-dockers/vms-blueprint)
-![](https://img.shields.io/github/languages/top/ik-vms-dockers/vms-blueprint?color=green&logo=terraform&logoColor=blue)
-![](https://img.shields.io/github/commit-activity/m/ik-vms-dockers/vms-blueprint)
-![](https://img.shields.io/github/contributors/ik-vms-dockers/vms-blueprint)
-![](https://img.shields.io/github/last-commit/ik-vms-dockers/vms-blueprint)
-[![Maintenance](https://img.shields.io/badge/Maintenu%3F-oui-green.svg)](https://GitHub.com/ik-vms-dockers/vms-blueprint/graphs/commit-activity)
+[![](https://img.shields.io/github/license/ik-vms-dockers/vms-factory)](https://github.com/ik-vms-dockers/vms-factory)
+![](https://img.shields.io/github/v/tag/ik-vms-dockers/vms-factory)
+[![](https://img.shields.io/github/workflow/status/ik-vms-dockers/vms-factory/Validator/master)](https://github.com/ik-vms-dockers/vms-factory/actions?query=is%3Acompleted)
+![](https://github.com/ik-vms-dockers/vms-factory/workflows/Validator/badge.svg)
+![](https://github.com/ik-vms-dockers/vms-factory/workflows/Labeler/badge.svg)
+![](https://img.shields.io/issues/github/ik-vms-dockers/vms-factory)
+![](https://img.shields.io/github/issues/ik-vms-dockers/vms-factory)
+![](https://img.shields.io/github/issues-closed/ik-vms-dockers/vms-factory)
+[![](https://img.shields.io/github/languages/code-size/ik-vms-dockers/vms-factory)](https://github.com/ik-vms-dockers/vms-factory)
+[![](https://img.shields.io/github/repo-size/ik-vms-dockers/vms-factory)](https://github.com/ik-vms-dockers/vms-factory)
+![](https://img.shields.io/github/languages/top/ik-vms-dockers/vms-factory?color=green&logo=terraform&logoColor=blue)
+![](https://img.shields.io/github/commit-activity/m/ik-vms-dockers/vms-factory)
+![](https://img.shields.io/github/contributors/ik-vms-dockers/vms-factory)
+![](https://img.shields.io/github/last-commit/ik-vms-dockers/vms-factory)
+[![Maintenance](https://img.shields.io/badge/Maintenu%3F-oui-green.svg)](https://GitHub.com/ik-vms-dockers/vms-factory/graphs/commit-activity)
 
 ## Usage example
 
@@ -62,6 +62,6 @@ Submit a pull request
 
 # Authors
 
-Currently maintained by [Ivan Katliarchuk](https://github.com/ivankatliarchuk) and these [awesome contributors](https://github.com/ik-vms-dockers/vms-blueprint/graphs/contributors).
+Currently maintained by [Ivan Katliarchuk](https://github.com/ivankatliarchuk) and these [awesome contributors](https://github.com/ik-vms-dockers/vms-factory/graphs/contributors).
 
 [![ForTheBadge uses-git](http://ForTheBadge.com/images/badges/uses-git.svg)](https://GitHub.com/)

@@ -1,0 +1,11 @@
+---
+box:
+  name: bento/ubuntu-20.04
+  version: 202005.21.0
+setup-env:
+  RAW_URL: https://raw.githubusercontent.com
+  BASE_URL: https://raw.githubusercontent.com/ik-vms-dockers/vms-provision
+  VERSION: v0.0.13
+  USER: vagrant
+  PACKAGES: |
+    apt-utils apt-transport-https gcc openssh-client bash bash-completion gnupg gnupg2 build-essential curl git-core lsb-core lsb-release build-essential mercurial pkg-config zip file vim ruby wget python3 make python3-pip libpcre3-dev nmap netcat
