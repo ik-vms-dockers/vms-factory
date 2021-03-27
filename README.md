@@ -12,11 +12,11 @@ VM(s) Factory
 ![](https://img.shields.io/github/issues-closed/ik-vms-dockers/vms-factory)
 [![](https://img.shields.io/github/languages/code-size/ik-vms-dockers/vms-factory)](https://github.com/ik-vms-dockers/vms-factory)
 [![](https://img.shields.io/github/repo-size/ik-vms-dockers/vms-factory)](https://github.com/ik-vms-dockers/vms-factory)
-![](https://img.shields.io/github/languages/top/ik-vms-dockers/vms-factory?color=green&logo=terraform&logoColor=blue)
+![](https://img.shields.io/github/languages/top/ik-vms-dockers/vms-factory?color=violet&logo=ruby&logoColor=ruby)
 ![](https://img.shields.io/github/commit-activity/m/ik-vms-dockers/vms-factory)
 ![](https://img.shields.io/github/contributors/ik-vms-dockers/vms-factory)
 ![](https://img.shields.io/github/last-commit/ik-vms-dockers/vms-factory)
-[![Maintenance](https://img.shields.io/badge/Maintenu%3F-oui-green.svg)](https://GitHub.com/ik-vms-dockers/vms-factory/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintenu%3F-oui-green.svg)](https://github.com/ik-vms-dockers/vms-factory/graphs/commit-activity)
 
 ## Usage example
 

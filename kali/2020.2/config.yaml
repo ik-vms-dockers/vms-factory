@@ -1,0 +1,16 @@
+---
+box:
+  name: kalilinux/rolling
+  version: 2020.2.1
+spec:
+  fullname: kalilinux-amd64-tools-2020.2
+  cpu: 3
+  memory: 8000
+  gui: false
+setup-env:
+  RAW_URL: https://raw.githubusercontent.com
+  BASE_URL: https://raw.githubusercontent.com/ik-vms-dockers/vms-provision
+  VERSION: v0.0.14
+  USER: vagrant
+  PACKAGES: |
+    crowbar terminator

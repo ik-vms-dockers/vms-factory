@@ -127,3 +127,4 @@ build-iPhoneSimulator/
 **/.vagrant
 **/.vagrant/*
 */.vagrant
+boxes/*

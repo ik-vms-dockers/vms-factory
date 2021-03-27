@@ -1,0 +1,70 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+require 'yaml'
+VAGRANTFILE_API_VERSION = "2"
+currentDir = File.dirname(File.expand_path(__FILE__))
+
+if File.file?('config.yaml') then
+  settings = YAML.load_file('config.yaml')
+else
+  raise "Configuration file 'config.yaml' does not exist."
+end
+
+$non_priviledged = <<SCRIPT
+#!/bin/sh
+set -e
+curl -sSL# ${BASE_URL}/${VERSION}/config/.gitconfig -o ~/.gitconfig
+curl -sSL# ${BASE_URL}/${VERSION}/config/.vimrc -o ~/.vimrc
+curl -sSL# ${BASE_URL}/${VERSION}/config/.tmux.conf -o ~/.tmux.conf
+curl -sSL# ${BASE_URL}/${VERSION}/config/.tmux.conf.local -o ~/.tmux.conf.local
+SCRIPT
+
+if ARGV.include?("up") || ARGV.include?("provision") || ARGV.include?("--provision")
+  puts "bringing up vm(s) ..."
+end
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = settings["box"]["name"]
+  config.vm.box_version = settings["box"]["version"]
+
+  if !Vagrant.has_plugin?('vagrant-vbguest') then
+    config.vagrant.plugins = ["vagrant-reload"]
+  end
+
+  if Vagrant.has_plugin?('vagrant-vbguest') then
+    config.vbguest.auto_update = false
+  else
+    config.vagrant.plugins = ['vagrant-vbguest']
+  end
+
+  %w(.Brewfile .Brewfile.pentest).each do |f|
+    local = File.expand_path "#{f}"
+    if File.exist? local
+      config.vm.provision "file", source: local, destination: f
+    end
+  end
+
+  config.vm.provision "bootstrap", type: "shell",
+    path: "#{settings["setup-env"]["BASE_URL"]}/#{settings["setup-env"]["VERSION"]}/kali/001.install.sh",
+    privileged: true, name: "bootstrap",
+    env: settings["setup-env"]
+
+  config.vm.provision "static-files", type: "shell", inline: $non_priviledged,
+    privileged: false, name: "static-files",
+    env: settings["setup-env"]
+
+  config.vm.provision "linux-brew", type: "shell",
+    path: "#{settings["setup-env"]["BASE_URL"]}/#{settings["setup-env"]["VERSION"]}/kali/001.brew.sh",
+    privileged: false, name: "linux-brew",
+    env: settings["setup-env"]
+
+  config.vm.provider :virtualbox do |v, override|
+    v.name   = settings["spec"]["fullname"]
+    v.gui    = settings["spec"]["gui"]
+    v.memory = settings["spec"]["memory"]
+    v.cpus   = settings["spec"]["cpu"]
+  end
+
+  config.vm.post_up_message="Setup complete `vagrant ssh` to ssh into the box"
+
+end
